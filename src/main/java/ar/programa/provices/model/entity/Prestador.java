@@ -5,11 +5,10 @@ import ar.programa.provices.emun.CategoriaEnum;
 import java.util.List;
 
 @lombok.Data
-
 @lombok.NoArgsConstructor
 public class Prestador {
     int id;
-    CategoriaEnum categoria;
+    Categoria categoria;
     Perfil perfil;
     List<DiaLaboral> diasLaborales;
     String horarioLaboral;

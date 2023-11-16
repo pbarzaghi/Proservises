@@ -12,7 +12,7 @@ import javax.persistence.*;
 public class Review {
     @Id
     @Column (name ="idCalificacion" )
-    @GeneratedValue (strategy=GenerationType.SEQUENCE, generator="ID_SEQ")
+    @GeneratedValue (strategy=GenerationType.IDENTITY)
     int id;
 
     @Column (name ="puntaje" )
