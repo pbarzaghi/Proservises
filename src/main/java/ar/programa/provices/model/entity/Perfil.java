@@ -13,6 +13,7 @@ public class Perfil {
     @Column(name="idPerfil")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
+
     @Column(name="nombre")
     String nombre;
     @Column(name="apellido")
@@ -22,7 +23,7 @@ public class Perfil {
     @Column(name="mail")
     String email;
 
-    //TODO Falta hacer tipo Doc en Perfil
+    @Enumerated(value = EnumType.STRING)
     TipoDocEnum tipoDoc;
 
     @Column(name="NroDoc")

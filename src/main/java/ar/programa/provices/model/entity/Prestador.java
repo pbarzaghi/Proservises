@@ -18,24 +18,25 @@ public class Prestador {
 
 
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="id", referencedColumnName="idCategoria")
     Categoria categoria;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id",referencedColumnName = "idPerfil")
     Perfil perfil;
 
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL)
     List<DiaLaboral> diasLaborales;
 
     @JoinColumn(name="horarioAtencion")
     String horarioLaboral;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     List<Contrato> contratos;
 
-    @OneToMany
+
+    @OneToMany(cascade = CascadeType.ALL)
     List<FotoTrabajoRealizado> trabajosRealizados;
 
 

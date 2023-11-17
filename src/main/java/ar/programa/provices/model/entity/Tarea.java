@@ -16,11 +16,13 @@ public class Tarea {
     @GeneratedValue (strategy=GenerationType.IDENTITY)
     int id;
 
+
+    @Enumerated(value = EnumType.STRING)
     CategoriaEnum categoria;
    @Column (name="descripcion")
     String  descripcionTarea;
 
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL)
     List<Contrato> contratos;
 
 

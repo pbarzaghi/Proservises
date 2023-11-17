@@ -16,7 +16,7 @@ public class Categoria {
     int id;
 
 
-    //TODO: Fata hacer el Enum Categoria ,nombre de la columna es: name
+      @Enumerated(value = EnumType.STRING)
        CategoriaEnum categoriaEnum;
 
 }

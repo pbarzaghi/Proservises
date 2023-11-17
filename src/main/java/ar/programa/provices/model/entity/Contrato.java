@@ -14,16 +14,16 @@ public class Contrato {
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     int id;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="id",referencedColumnName = "idPrestador")
     Prestador prestador;
 
 
-    @ManyToOne
+    @ManyToOne( cascade = CascadeType.ALL)
     @JoinColumn(name="id",referencedColumnName = "id")
     Consumidor consumidor;
 
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name = "servico",
             joinColumns = {
@@ -39,7 +39,7 @@ public class Contrato {
     @Column(name="aceptacionTrabajo")
     boolean aceptoTrabajo;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id",referencedColumnName = "idCalificacion")
     Review review;
 

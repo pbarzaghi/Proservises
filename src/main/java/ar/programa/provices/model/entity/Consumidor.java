@@ -16,12 +16,14 @@ public class Consumidor {
 
     @Column(name="nombreyApellido")
     String nombreyapellido;
+
     @Column(name="direccion")
     String direccion;
+
     @Column(name="tel")
     String tel;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     List<Contrato> contratos;
 
 }

@@ -16,13 +16,13 @@ public class DiaLaboral {
     int id;
 
 
-    //TODO falta realizar el nun, nombre columna nombre
+    @Enumerated(value = EnumType.STRING)
     DiaLaboralEnum dialaboral;
 
 
 
 
-    @ManyToMany(mappedBy="diasLaborales")
+    @ManyToMany(mappedBy="diasLaborales",cascade = CascadeType.ALL)
     List<Prestador> prestadores;
 
 }
