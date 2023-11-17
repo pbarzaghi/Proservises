@@ -11,8 +11,12 @@ public class FotoTrabajoRealizado {
     @Column(name="idFotoTrabajoRealizado")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
+
     @Column(name="foto")
     String foto;
-    //TODO: falta prestador en la clase FotoTrabajoRealizado
+
+
+    @ManyToOne
+    @JoinColumn(name="id",referencedColumnName = "idPrestador")
     Prestador prestador;
 }

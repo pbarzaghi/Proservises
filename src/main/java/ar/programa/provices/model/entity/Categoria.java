@@ -15,6 +15,7 @@ public class Categoria {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
 
+
     //TODO: Fata hacer el Enum Categoria ,nombre de la columna es: name
        CategoriaEnum categoriaEnum;
 

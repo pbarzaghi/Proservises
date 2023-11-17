@@ -13,17 +13,34 @@ public class Contrato {
     @Column(name="id")
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     int id;
-    //TODO realizar presentador en Contrato
+
+    @ManyToOne
+    @JoinColumn(name="id",referencedColumnName = "idPrestador")
     Prestador prestador;
-    //TODO realizar Consumidor en Contrato
+
+
+    @ManyToOne
+    @JoinColumn(name="id",referencedColumnName = "id")
     Consumidor consumidor;
-    //TODO realizar Lista Tarea en Contrato
+
+    @ManyToMany
+    @JoinTable(
+            name = "servico",
+            joinColumns = {
+                    @JoinColumn(name = "id"),
+            },
+            inverseJoinColumns = @JoinColumn(name = "tareaId")
+    )
     List<Tarea> tareas;
+
     @Column(name="precio")
     int precio;
+
     @Column(name="aceptacionTrabajo")
     boolean aceptoTrabajo;
-    //TODO realizar Review en Contrato
+
+    @OneToOne
+    @JoinColumn(name = "id",referencedColumnName = "idCalificacion")
     Review review;
 
     public Contrato(Prestador prestador,Consumidor consumidor){

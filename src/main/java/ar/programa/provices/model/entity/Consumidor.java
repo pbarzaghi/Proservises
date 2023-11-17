@@ -13,6 +13,7 @@ public class Consumidor {
     @Column(name="id")
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     int id;
+
     @Column(name="nombreyApellido")
     String nombreyapellido;
     @Column(name="direccion")
@@ -20,7 +21,7 @@ public class Consumidor {
     @Column(name="tel")
     String tel;
 
-    // TODO : Falta hacer Consumidores la lista de contrato
+    @OneToMany
     List<Contrato> contratos;
 
 }

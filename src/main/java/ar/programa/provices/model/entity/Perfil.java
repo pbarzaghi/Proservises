@@ -21,6 +21,7 @@ public class Perfil {
     String tel;
     @Column(name="mail")
     String email;
+
     //TODO Falta hacer tipo Doc en Perfil
     TipoDocEnum tipoDoc;
 
@@ -36,12 +37,6 @@ public class Perfil {
     @Column(name="fotoPerfil")
     String fotoPerfil;
 
-    /*
 
-NroDoc varchar(45)
-NroCuilCuit varchar(45)
-fechaNacimientol datetime
-fotoPerfil
-     */
 
 }

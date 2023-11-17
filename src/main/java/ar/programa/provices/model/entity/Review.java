@@ -5,7 +5,6 @@ import jdk.jfr.Enabled;
 import javax.persistence.*;
 
 @lombok.Data
-
 @lombok.NoArgsConstructor
 @Entity
 @Table (name = "review")

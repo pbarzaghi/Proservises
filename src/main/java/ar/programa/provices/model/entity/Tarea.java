@@ -20,7 +20,7 @@ public class Tarea {
    @Column (name="descripcion")
     String  descripcionTarea;
 
-   // TODO : Falta hacer Tarea lista de contrato
+    @ManyToMany
     List<Contrato> contratos;
 
 

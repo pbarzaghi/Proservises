@@ -14,11 +14,15 @@ public class DiaLaboral {
     @Column(name="id")
     @GeneratedValue (strategy = GenerationType.AUTO)
     int id;
+
+
     //TODO falta realizar el nun, nombre columna nombre
     DiaLaboralEnum dialaboral;
 
-    String horarioAtencion;
 
+
+
+    @ManyToMany(mappedBy="diasLaborales")
     List<Prestador> prestadores;
 
 }
