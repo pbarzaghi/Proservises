@@ -10,6 +10,7 @@ import java.util.List;
 
 @Entity
 @Table (name="tarea")
+
 public class Tarea {
     @Id
     @Column (name="idTarea")
